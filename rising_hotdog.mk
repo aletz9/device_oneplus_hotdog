@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/hotdog/device.mk)
 
 # Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/rising/config/rising.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := yaap_hotdog
@@ -27,6 +27,14 @@ PRODUCT_SYSTEM_DEVICE := OnePlus7TPro
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
+
+# RisingOS
+WITH_GMS := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := true
+TARGET_ENABLE_PIXEL_FEATURES := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+RISING_MAINTAINER := AlexS
+RISING_CHIPSET := Snapdragon855+
 
 # Boot animation
 scr_resolution := 1440
